@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- View for Tree View -->
+        <record id="latihan_biodata_tree_view" model="ir.ui.view">
+            <field name="name">latihan.biodata.tree.view</field>
+            <field name="model">latihan.biodata</field>
+            <field name="arch" type="xml">
+                <tree string="Biodata">
+                    <field name="name"/>
+                    <field name="fullname"/>
+                    <field name="birthdate"/>
+                    <field name="age"/>
+                    <field name="child_count"/>
+                    <field name="photo"/>
+                    <field name="gender"/>
+                    <field name="education_sd"/>
+                    <field name="education_smp"/>
+                    <field name="education_sltp"/>
+                    <field name="education_sma"/>
+                    <field name="education_smk"/>
+                    <field name="education_smu"/>
+                    <field name="education_slta"/>
+                    <field name="education_college"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- View for Form View -->
+        <record id="latihan_biodata_form_view" model="ir.ui.view">
+            <field name="name">latihan.biodata.form.view</field>
+            <field name="model">latihan.biodata</field>
+            <field name="arch" type="xml">
+                <form string="Biodata">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="fullname"/>
+                            <field name="birthdate"/>
+                            <field name="age"/>
+                            <field name="gender"/>
+                            <field name="child_count"/>
+                            <field name="photo"/>
+                        </group>
+                        <group string="Pendidikan">
+                            <field name="education_sd"/>
+                            <field name="education_smp"/>
+                            <field name="education_sltp"/>
+                            <field name="education_sma"/>
+                            <field name="education_smk"/>
+                            <field name="education_smu"/>
+                            <field name="education_slta"/>
+                            <field name="education_college"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action for Biodata -->
+        <record id="latihan_biodata_action" model="ir.actions.act_window">
+            <field name="name">Biodata</field>
+            <field name="res_model">latihan.biodata</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
