@@ -9,7 +9,7 @@ class Biodata(models.Model):
     fullname = fields.Char(string='Nama Lengkap')
     birthdate = fields.Date(string='Tanggal Lahir')
     age = fields.Integer(string='Umur', compute='_compute_age', store=True)
-    gender = fields.Selection([('male', 'Male'), ('Laki-laki', 'Perempuan')], string='Jenis Kelamin')
+    gender = fields.Selection([('male', 'Laki-laki'), ('female', 'Perempuan')], string='Jenis Kelamin')
     child_count = fields.Integer(string='Anak ke-')
     photo = fields.Binary(string='Photo')
 
